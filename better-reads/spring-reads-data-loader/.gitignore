@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+### Secure bundle ###
+/src/main/resources/secure-connect-bookreads.zip
+.history

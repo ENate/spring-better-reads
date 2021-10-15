@@ -1,0 +1,41 @@
+spring.application.name: spring-reads-data-loader
+
+
+datadump.location: 
+    author: /home/better_reads_data_dump/authors.txt
+    works: /home/better_reads_data_dump/works.txt
+
+
+spring:
+    data:
+        cassandra:
+            keyspace-name: main
+            username: 
+            password: 
+            # schema action based on CRUD on dbase
+            schema-action: create-if-not-exists # recreate # creates class models 
+            # recommended in dev environment
+            request:
+                timeout: 10s
+            connection:
+                connect-timeout: 10s
+                init-query-timeout: 10s
+
+# for secure connect and expose zip to application
+datastax.astra:
+    secure-connect-bundle: secure-connect-bookreads.zip
+
+astra.db:
+    id: 
+    region: europe-west1
+    keyspace: main
+    application.token:
+
+
+
+
+
+
+# Client secret
+
+# Token
